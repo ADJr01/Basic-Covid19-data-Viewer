@@ -45,7 +45,7 @@ def get_world_info(data_set: dict, country_name, wait=0):
             print(warn(f"Confirmed: {i['confirmed']}"))
             print(confirmed(f"Deaths {i['deaths']}"))
             print('=' * 20)
-            if wait > 0:
+            if wait > 0:#only going to execute if wait parameter is given [in second]
                 time.sleep(wait)
     except Exception as e:
         print('Failed To load data \e{}'.format(e))
